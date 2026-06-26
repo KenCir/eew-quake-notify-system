@@ -6,19 +6,11 @@ Project DM-D.S.S から地震情報・緊急地震速報関連の情報を受信
 
 ## Terms of Use
 
-このアプリケーションは、個人のローカル環境で Project DM-D.S.S の地震情報および緊急地震速報関連情報を受信し、ローカルデスクトップ通知と VOICEVOX 読み上げを行うためのものです。
-
-受信した地震情報、緊急地震速報、その他の Project DM-D.S.S 配信データを、Discord、Slack、LINE、Webhook、メール、remote push、public feed、relay などで外部へ再配信する用途には使用しません。
-
-本アプリケーションは防災情報を補助的に確認するための個人用ツールです。実際の避難判断や安全確保では、気象庁、自治体、公共機関などの公式情報も必ず確認してください。
+利用上の注意は [TERMS.md](TERMS.md) を参照してください。
 
 ## Privacy Policy
 
-このアプリケーションは、設定ファイルと環境変数をローカル環境で読み込みます。Project DM-D.S.S の OAuth client secret、access token、受信した地震情報、通知履歴、読み上げ内容を、このアプリケーション自身が外部サービスへ送信することはありません。
-
-Project DM-D.S.S への接続では、OAuth client credentials flow により access token を取得し、Socket Start v2 および WebSocket 接続に利用します。OAuth client secret や token はログに出力しません。
-
-VOICEVOX を利用する場合、既定ではローカルホスト `http://127.0.0.1:50021` の VOICEVOX HTTP API に読み上げ文を送信します。`tts.voicevox_url` を外部ホストに変更した場合、その送信先の管理責任は利用者にあります。
+プライバシーポリシーは [PRIVACY.md](PRIVACY.md) を参照してください。
 
 ## 現在の構成
 
