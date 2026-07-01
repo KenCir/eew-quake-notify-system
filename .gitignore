@@ -1,0 +1,15 @@
+# Local runtime config can contain API tokens or environment-specific endpoints.
+config.toml
+state/
+logs/
+*.log
+*.lock
+!Cargo.lock
+
+# Build and local release outputs.
+target/
+dist/
+*.zip
+*.sha256
+
+test-data/

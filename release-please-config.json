@@ -1,0 +1,9 @@
+{
+  "packages": {
+    ".": {
+      "release-type": "rust",
+      "package-name": "eew-quake-notify-system",
+      "changelog-path": "CHANGELOG.md"
+    }
+  }
+}

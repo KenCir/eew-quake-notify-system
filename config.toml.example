@@ -1,0 +1,46 @@
+[dmdata]
+socket_start_url = "https://api.dmdata.jp/v2/socket"
+token_endpoint_url = "https://manager.dmdata.jp/account/oauth2/v1/token"
+auth_mode = "client_credentials"
+api_token_env = "DMDATA_API_TOKEN"
+client_id = ""
+client_id_env = "DMDATA_CLIENT_ID"
+client_secret = ""
+client_secret_env = "DMDATA_CLIENT_SECRET"
+oauth_scopes = []
+# eew.forecast は契約・OAuth scope 許可後に必要なら追加してください。
+classifications = ["telegram.earthquake", "eew.warning"]
+types = ["VXSE43", "VXSE44", "VXSE45", "VXSE51", "VXSE52", "VXSE53", "VXSE62"]
+test = "no"
+app_name = "eew-quake-notify"
+format_mode = "json"
+reconnect_initial_ms = 1000
+reconnect_max_ms = 30000
+
+[notify]
+desktop_enabled = true
+enabled_kinds = ["earthquake", "intensity_report", "eew_warning"]
+min_intensity = "3"
+
+[tts]
+enabled = true
+engine = "voicevox"
+voicevox_url = "http://127.0.0.1:50021"
+speaker = 1
+enabled_kinds = ["earthquake", "intensity_report", "eew_warning"]
+min_intensity = "3"
+
+[state]
+enabled = true
+file_path = "state/dedup-state.json"
+max_entries = 1000
+
+[runtime]
+single_instance = true
+lock_file_path = "state/app.lock"
+
+[log]
+level = "info"
+console_enabled = true
+file_enabled = false
+file_path = "logs/eew-quake-notify.log"

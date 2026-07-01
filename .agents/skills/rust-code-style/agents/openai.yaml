@@ -1,0 +1,7 @@
+interface:
+  display_name: "Rust Code Style"
+  short_description: "Rust style and quality rules"
+  default_prompt: "Use $rust-code-style to implement or review Rust code changes in this repository."
+
+policy:
+  allow_implicit_invocation: true

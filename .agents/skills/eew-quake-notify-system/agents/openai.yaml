@@ -1,0 +1,7 @@
+interface:
+  display_name: "EEW Quake Notify System"
+  short_description: "Rust earthquake alert service guidance"
+  default_prompt: "Use $eew-quake-notify-system to implement a reliable Rust feature for Project DM-D.S.S earthquake notifications."
+
+policy:
+  allow_implicit_invocation: true
